@@ -75,7 +75,7 @@
     <script src="script.js"></script>
 </body>
 
-<<<<<<< HEAD:Homepage.php
+
 <footer>
     <div>
         <p>Contact</p>
@@ -84,7 +84,5 @@
     </div>
 </footer>
 
+
 </html>
-=======
-</html>
->>>>>>> bfa0749dfd5274c0ea223aecd342ffe4f912c881:Homepage.html
