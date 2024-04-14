@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
     <title>Homepage</title>
 </head>
 <body>
     <div class="header">
         <img src="Pictures/Logo.png" alt="" class="logo" width="200px">
-        <h1>Wing's Paradise|Wings</h1>
+        <h1>Wing's Paradise|Over Ons</h1>
     </div>
  <nav>
         <ul>
@@ -35,38 +35,14 @@
         </ul>
     </nav>
 
-    
-    <h2>Wings List</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Hoeveel</th>
-            <th>Prijs</th>
-        </tr>
-        <?php include "Wings Crud/connect.php"; ?>
+    <img src="Pictures/turkey-dance-happy-thanksgiving.gif" alt="" class="chicken-gif">
 
-        <?php
-        $conn = connectDb();
-        $query = $conn->prepare("SELECT * FROM " . CRUD_TABLE);
-        $query->execute();
-        $wings = $query->fetchAll();
 
-        foreach($wings as $wing): ?>
-            <tr>
-                <td><?= $wing['id'] ?></td>
-                <td><?= $wing['name'] ?></td>
-                <td><?= $wing['hoeveel'] ?></td>
-                <td><?= $wing['prijs'] ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-    
     <footer>
         <div>
             <p>Contact</p> 
             <p>Adres</p>
-            <p>Vragen</p>
+            <P>Vragen</P>
         </div>
     </footer>
 </body>

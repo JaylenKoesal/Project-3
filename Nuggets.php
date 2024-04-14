@@ -11,7 +11,7 @@
         <img src="Pictures/Logo.png" alt="" class="logo" width="200px">
         <h1>Wing's Paradise|Nuggets</h1>
     </div>
-    <nav>
+ <nav>
         <ul>
             <li><a href="Homepage.php">Home</a></li>
             <li class="dropdown">
@@ -31,8 +31,10 @@
                 </ul>
             </li>
             <li><a href="Service.php">Service</a></li>
+            <li><a href="Over-ons.php">Over ons</a></li>
         </ul>
     </nav>
+
     
     <footer>
         <div>

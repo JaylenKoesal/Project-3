@@ -33,6 +33,7 @@
                 </ul>
             </li>
             <li><a href="Service.php">Service</a></li>
+            <li><a href="Over-ons.php">Over ons</a></li>
         </ul>
     </nav>
 
