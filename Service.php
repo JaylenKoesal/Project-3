@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="wings.css">
     <title>Homepage</title>
 </head>
 <body>
@@ -31,8 +31,17 @@
                 </ul>
             </li>
             <li><a href="Service.php">Service</a></li>
+            <li><a href="Over-ons.php">Over ons</a></li>
         </ul>
     </nav>
+
+    <div class="contact2">
+    <h1>CONTACT</h1>
+    <h2>UW MENING IS BELANGERIJK</h2>
+    <p>BEL ONS VIA (+310654683894)</p>
+    <img src="Pictures/call.png" alt="" width="200px">
+    </div>
+    
     
     <footer>
         <div>

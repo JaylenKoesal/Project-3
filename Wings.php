@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Homepage</title>
+    <link rel="stylesheet" href="wings.css">
+    <title>Wings</title>
 </head>
 <body>
     <div class="header">
         <img src="Pictures/Logo.png" alt="" class="logo" width="200px">
         <h1>Wing's Paradise|Wings</h1>
     </div>
- <nav>
+    <nav>
         <ul>
             <li><a href="Homepage.php">Home</a></li>
             <li class="dropdown">
@@ -35,32 +35,47 @@
         </ul>
     </nav>
 
-    
-    <h2>Wings List</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Hoeveel</th>
-            <th>Prijs</th>
-        </tr>
-        <?php include "Wings Crud/connect.php"; ?>
-
-        <?php
-        $conn = connectDb();
-        $query = $conn->prepare("SELECT * FROM " . CRUD_TABLE);
-        $query->execute();
-        $wings = $query->fetchAll();
-
-        foreach($wings as $wing): ?>
+    <div class="wings-tabel">
+        <h2>Wings List</h2>
+        <a href='insert.php'>Voeg nieuw product toe</a><br>
+        <table border="1" class="foto-tabel">
             <tr>
-                <td><?= $wing['id'] ?></td>
-                <td><?= $wing['name'] ?></td>
-                <td><?= $wing['hoeveel'] ?></td>
-                <td><?= $wing['prijs'] ?></td>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Hoeveel</th>
+                <th>Prijs</th>
+                <th>Photo</th>
+                <th>Action</th>
             </tr>
-        <?php endforeach; ?>
-    </table>
+            <?php
+            include_once "connect.php";
+
+            $conn = connectDb();
+            $stmt = $conn->prepare("SELECT * FROM " . CRUD_TABLE);
+            $stmt->execute();
+            $wings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach($wings as $wing): ?>
+                <tr>
+                    <td><?= $wing['id'] ?></td>
+                    <td><?= $wing['name'] ?></td>
+                    <td><?= $wing['hoeveel'] ?></td>
+                    <td><?= $wing['prijs'] ?></td>
+                    <td><img src='img/<?= $wing['foto'] ?>' alt='<?= $wing['name'] ?>' width='100'></td>
+                    <td>
+                        <form method='get' action='update.php'>
+                            <input type="hidden" name="id" value="<?= $wing['id'] ?>">
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form method='get' action='delete.php'>
+                            <input type="hidden" name="id" value="<?= $wing['id'] ?>">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
     
     <footer>
         <div>

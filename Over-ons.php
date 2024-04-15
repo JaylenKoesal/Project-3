@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="wings.css">
     <title>Homepage</title>
 </head>
 <body>
@@ -35,7 +35,13 @@
         </ul>
     </nav>
 
-    <img src="Pictures/turkey-dance-happy-thanksgiving.gif" alt="" class="chicken-gif">
+    <div class="over-mij">
+        <img src="Pictures/turkey-dance-happy-thanksgiving.gif" alt="" >
+        <p>Ik ben Jaylen Koesal en ik ben 17 jaar, i kzit op het techniek college zuidplein jaar 1 <br> en mij hobbies zijn gymen, naar buiten gaan,gamen en progameren.</p>
+        <p>Wij hebben het gedurende periode aan dit project gewerkt om een website te maken. <br> We hebben ervoor gekozen om een kippenwinkel te maken.</p>
+        <p>Wij moesten de codeer talen html css php gebruiken (en javascript)</p>
+
+    </div>
 
 
     <footer>

@@ -7,6 +7,19 @@ h1 {
     color: white;
 }
 
+h2{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.over-mij{
+    color: white;
+    text-align: center;
+}
+
 .nieuws-text {
     font-size: 40px;
     left: 10%;
@@ -213,9 +226,12 @@ footer p{
     margin: 0 10px;
 }
 
-.chicken-gif{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+.foto-tabel{
+    color: white;
 }
+
+.contact2{
+    text-align: center;
+}
+
