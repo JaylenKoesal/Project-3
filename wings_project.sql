@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2024 at 06:32 AM
+-- Generation Time: Apr 15, 2024 at 11:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,6 +31,7 @@ CREATE TABLE `wings` (
   `id` int(99) NOT NULL,
   `hoeveel` int(99) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `foto` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `prijs` decimal(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -38,10 +39,12 @@ CREATE TABLE `wings` (
 -- Dumping data for table `wings`
 --
 
-INSERT INTO `wings` (`id`, `hoeveel`, `name`, `prijs`) VALUES
-(1, 4, 'American Chicken Wings', 4.99),
-(2, 4, 'American Hot Wings', 5.99),
-(7, 3, 'Surinaamse Kippenpoten', 4.50);
+INSERT INTO `wings` (`id`, `hoeveel`, `name`, `foto`, `prijs`) VALUES
+(2, 3, 'American Hot Wings', 'AHW.jpg', 3.00),
+(7, 4, 'Surinaamse Wings', 'SKP.jpg', 3.50),
+(8, 5, 'Red Hot Wings', 'RHW.jpg', 4.50),
+(9, 5, 'Garlig Wings', 'GW.jpg', 4.50),
+(10, 5, 'Teriyaki Chicken Wings', 'TCW.jpg', 4.50);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +64,7 @@ ALTER TABLE `wings`
 -- AUTO_INCREMENT for table `wings`
 --
 ALTER TABLE `wings`
-  MODIFY `id` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
